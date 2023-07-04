@@ -37,11 +37,13 @@ The page will reload if you make edits.
 | `isOpen`        | boolean  | Yes      | Specifies the state of the sidebar                                           |
 | `setIsOpen`     | function | Yes      | A function that toggles a boolean state to hide and reveal the sidebar .     |
 
-## useDimensions Hook
+# Hooks
+
+## useDimensions
 
 The useDimensions hook is a custom hook that calculates the dimensions (width and height) of a ref object. It returns an object containing the dimensions.
 
-# Example
+### Example
 
 ```typescript
 import React, { FC } from "react";
