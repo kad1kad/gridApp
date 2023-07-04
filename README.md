@@ -37,6 +37,30 @@ The page will reload if you make edits.
 | `isOpen`        | boolean  | Yes      | Specifies the state of the sidebar                                           |
 | `setIsOpen`     | function | Yes      | A function that toggles a boolean state to hide and reveal the sidebar .     |
 
+## useDimensions Hook
+
+The useDimensions hook is a custom hook that calculates the dimensions (width and height) of a ref object. It returns an object containing the dimensions.
+
+# Example
+
+`import React, { FC } from "react";
+import { createRef } from "react";
+import useDimensions from "../../hooks/useDimensions";
+
+function MyComponent() {
+const divRef = createRef<HTMLDivElement>();
+const dimensions = useDimensions(divRef);
+
+return (
+
+<div ref={ref}>
+<p>Width: {dimensions.width}px</p>
+<p>Height: {dimensions.height}px</p>
+</div>
+);
+}
+`
+
 # Viewport Grid
 
 ## Task
