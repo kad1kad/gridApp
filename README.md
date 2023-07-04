@@ -43,23 +43,23 @@ The useDimensions hook is a custom hook that calculates the dimensions (width an
 
 # Example
 
-`import React, { FC } from "react";
+```typescript
+import React, { FC } from "react";
 import { createRef } from "react";
 import useDimensions from "../../hooks/useDimensions";
 
 function MyComponent() {
-const divRef = createRef<HTMLDivElement>();
-const dimensions = useDimensions(divRef);
+  const divRef = createRef<HTMLDivElement>();
+  const dimensions = useDimensions(divRef);
 
-return (
-
-<div ref={ref}>
-<p>Width: {dimensions.width}px</p>
-<p>Height: {dimensions.height}px</p>
-</div>
-);
+  return (
+    <div ref={ref}>
+      <p>Width: {dimensions.width}px</p>
+      <p>Height: {dimensions.height}px</p>
+    </div>
+  );
 }
-`
+```
 
 # Viewport Grid
 
