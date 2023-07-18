@@ -30,13 +30,13 @@ const Sidebar: FC<SidebarProps> = ({ getInputValue, isOpen, setIsOpen }) => {
   }
 
   return (
-    <div style={{ width: isOpen ? "250px" : "15px" }} className="sidebar">
+    <div style={{ width: isOpen ? "250px" : "10px" }} className="sidebar">
       <Burger onClick={toggleSidebar} />
       <div
         className="input-wrapper"
         style={{ display: isOpen ? "flex" : "none" }}
       >
-        <label>
+        <label htmlFor="rowsLabel">
           Rows <span>Maximum 10</span>
         </label>
 
@@ -48,10 +48,10 @@ const Sidebar: FC<SidebarProps> = ({ getInputValue, isOpen, setIsOpen }) => {
           max="10"
           defaultValue={2}
           onChange={updateValidValue}
-          aria-labelledby="rowsLabel"
+          id="rowsLabel"
         />
 
-        <label id="columnsLabel">
+        <label htmlFor="columnsLabel">
           Columns <span>Maximum 10</span>
         </label>
 
@@ -63,7 +63,7 @@ const Sidebar: FC<SidebarProps> = ({ getInputValue, isOpen, setIsOpen }) => {
           max="10"
           defaultValue={2}
           onChange={updateValidValue}
-          aria-labelledby="columnsLabel"
+          id="columnsLabel"
         />
       </div>
     </div>
